@@ -32,7 +32,9 @@ for i in range(7):
         run_val == ee_pos_drop6
     robot.open_gripper()
     robot.move_arm_jpos(grasp_jpos)
+    achieved_jpos = robot.get_arm_jpos()
     robot.close_gripper()
     robot.move_hand_to(run_val)
     robot.open_gripper()
     robot.home()
+    print(achieved_jpos)
